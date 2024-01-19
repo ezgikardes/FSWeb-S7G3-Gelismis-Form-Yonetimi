@@ -17,7 +17,7 @@ function App() {
       {users.map(user => <div className='user-container'>
         <p>{user.name}</p>
         <p>{user.email}</p>
-        <p>{user.terms ? "Kullanım Koşulları Onaylandı" : 
+        <p>{user.toc ? "Kullanım Koşulları Onaylandı" : 
         "Kullanım Koşulları Reddedildi"}
         </p>
       </div>)}

@@ -129,7 +129,7 @@ export default function Form({addNewUser}) {
             onChange={handleChange}></input>
         </label>
         {formErrors.password && 
-        (<div className="input-error">{formErrors.password}</div>)}
+        (<div className="input-error email-validation-msg">{formErrors.password}</div>)}
       </div>
       <div>
         <label>
@@ -143,7 +143,8 @@ export default function Form({addNewUser}) {
         {formErrors.toc && 
         (<div className="input-error">{formErrors.toc}</div>)}
         <button 
-          type="submit" 
+          type="submit"
+          id="user-form-button" //cypress testi için uniq bir id ataması yapıyoruz
           disabled={!formValid} //form Valid değilse disable özelliğini aktif et.
         >
           Gönder
